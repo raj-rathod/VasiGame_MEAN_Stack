@@ -1,0 +1,361 @@
+<div [style.height]="flag1 ? '80px':'150px'"></div>
+
+<div class="containers-fluid text-white" *ngIf=!moreGamesFlag>
+      <div class="mb-1"><div class="btn btn-outline-warning ml-5" (click)="moreGames()">More</div></div>
+    <div class="row">
+         <div class="col-md-3 ml-5">
+            <div class="wrapper">
+                <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                    <img src="../../assets/image/poster.jpg">
+                    <div class="descriptions">
+                        <h1 class="text-center">Game Name</h1>
+                       
+                        <p>
+                            After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                            legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                        </p>
+                        <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                           Hint
+                        </a>
+                        <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                       
+                    </div>
+                </div>
+            </div>
+         </div>
+         <div class="col-md-1"></div>
+         <div class="col-md-3">
+            <div class="wrapper">
+                <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                    <img src="../../assets/image/poster.jpg">
+                    <div class="descriptions">
+                        <h1 class="text-center">Game Name</h1>
+                       
+                        <p>
+                            After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                            legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                        </p>
+                        <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                           Hint
+                        </a>
+                        <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                       
+                    </div>
+                </div>
+            </div>
+         </div>
+         <div class="col-md-1"></div>
+         <div class="col-md-3">
+            <div class="wrapper">
+                <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                    <img src="../../assets/image/poster.jpg">
+                    <div class="descriptions">
+                        <h1 class="text-center">Game Name</h1>
+                       
+                        <p>
+                            After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                            legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                        </p>
+                        <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                           Hint
+                        </a>
+                        <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                       
+                    </div>
+                </div>
+            </div>
+         </div>
+         <div class="col-md-1"></div>
+       
+    </div>
+    <div class="row">
+        <div class="col-md-3 ml-5">
+           <div class="wrapper">
+               <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                   <img src="../../assets/image/poster.jpg">
+                   <div class="descriptions">
+                       <h1 class="text-center">Game Name</h1>
+                      
+                       <p>
+                           After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                           legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                       </p>
+                       <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                          Hint
+                       </a>
+                       <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                      
+                   </div>
+               </div>
+           </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+           <div class="wrapper">
+               <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                   <img src="../../assets/image/poster.jpg">
+                   <div class="descriptions">
+                       <h1 class="text-center">Game Name</h1>
+                      
+                       <p>
+                           After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                           legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                       </p>
+                       <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                          Hint
+                       </a>
+                       <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                      
+                   </div>
+               </div>
+           </div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+           <div class="wrapper">
+               <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                   <img src="../../assets/image/poster.jpg">
+                   <div class="descriptions">
+                       <h1 class="text-center">Game Name</h1>
+                      
+                       <p>
+                           After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                           legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                       </p>
+                       <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                          Hint
+                       </a>
+                       <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                      
+                   </div>
+               </div>
+           </div>
+        </div>
+        <div class="col-md-1"></div>
+      
+   </div>
+
+</div>
+<div *ngIf=moreGamesFlag>
+    <div class="text-center text-white"><h2><b></b></h2></div>
+    <mat-drawer-container class="example-container" autosize>
+        <mat-drawer #drawer class="example-sidenav" mode="side"  (mouseleave)="sidenavClose(drawer)" >
+          <div class="text-center">
+           
+            <h2 class="text-white"><b>Category</b></h2>
+          </div>
+          <hr class="bg-danger " style="height: 3px;">
+            <ul style="list-style-type:none;" id="sidenavLink">
+              
+                <li> <div class="text-white mt-3 btn" (click)="adventure(drawer)"><b style="font-size:15px;"> Adventure</b>  </div></li>
+                <li> <div class="text-white  btn" (click)="educational(drawer)"><b style="font-size:15px;"> Educational</b>  </div></li>
+                <li> <div class="text-white  btn" (click)="action(drawer)"><b style="font-size:15px;"> Action</b>  </div></li>
+                <li> <div class="text-white  btn" (click)="board(drawer)"><b style="font-size:15px;"> Board</b>  </div></li>
+                <li> <div class="text-white  btn" (click)="cards(drawer)"><b style="font-size:15px;"> Cards</b>  </div></li>
+                <li> <div class="text-white  btn" (click)="casual(drawer)"><b style="font-size:15px;"> Casual</b>  </div></li>
+                <li> <div class="text-white  btn" (click)="multiplayer(drawer)"><b style="font-size:15px;"> Multiplayer</b>  </div></li>
+                <li> <div class="text-white  btn" (click)="puzzles(drawer)"><b style="font-size:15px;"> Puzzles</b>  </div></li>
+                <li> <div class="text-white  btn" (click)="sports(drawer)"><b style="font-size:15px;"> Sports</b>  </div></li>
+                <li> <div class="text-white  btn" (click)="trivia(drawer)"><b style="font-size:15px;"> Trivia</b>  </div></li>
+            </ul>
+             
+             
+        </mat-drawer>
+      
+        <div class="example-sidenav-content">
+          <button type="button" mat-button (click)="drawer.toggle()">
+              <h2 class="text-warning"><i class="fa fa-bars"></i> {{category}}</h2>
+          </button>
+         
+          <div class="container-fluid">
+              <div class="card-deck">
+                
+                <div class="wrapper">
+                    <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                        <img src="../../assets/image/poster.jpg">
+                        <div class="descriptions">
+                            <h1 class="text-center">Game Name</h1>
+                           
+                            <p>
+                                After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                                legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                            </p>
+                            <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                               Hint
+                            </a>
+                            <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                        <img src="../../assets/image/poster.jpg">
+                        <div class="descriptions">
+                            <h1 class="text-center">Game Name</h1>
+                           
+                            <p>
+                                After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                                legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                            </p>
+                            <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                               Hint
+                            </a>
+                            <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                        <img src="../../assets/image/poster.jpg">
+                        <div class="descriptions">
+                            <h1 class="text-center">Game Name</h1>
+                           
+                            <p>
+                                After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                                legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                            </p>
+                            <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                               Hint
+                            </a>
+                            <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                        <img src="../../assets/image/poster.jpg">
+                        <div class="descriptions">
+                            <h1 class="text-center">Game Name</h1>
+                           
+                            <p>
+                                After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                                legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                            </p>
+                            <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                               Hint
+                            </a>
+                            <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                        <img src="../../assets/image/poster.jpg">
+                        <div class="descriptions">
+                            <h1 class="text-center">Game Name</h1>
+                           
+                            <p>
+                                After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                                legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                            </p>
+                            <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                               Hint
+                            </a>
+                            <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                        <img src="../../assets/image/poster.jpg">
+                        <div class="descriptions">
+                            <h1 class="text-center">Game Name</h1>
+                           
+                            <p>
+                                After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                                legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                            </p>
+                            <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                               Hint
+                            </a>
+                            <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                        <img src="../../assets/image/poster.jpg">
+                        <div class="descriptions">
+                            <h1 class="text-center">Game Name</h1>
+                           
+                            <p>
+                                After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                                legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                            </p>
+                            <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                               Hint
+                            </a>
+                            <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                        <img src="../../assets/image/poster.jpg">
+                        <div class="descriptions">
+                            <h1 class="text-center">Game Name</h1>
+                           
+                            <p>
+                                After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                                legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                            </p>
+                            <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                               Hint
+                            </a>
+                            <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                        <img src="../../assets/image/poster.jpg">
+                        <div class="descriptions">
+                            <h1 class="text-center">Game Name</h1>
+                           
+                            <p>
+                                After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                                legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                            </p>
+                            <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                               Hint
+                            </a>
+                            <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                           
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="card" [style.height]="flag1 ? '300px':'380px'">
+                        <img src="../../assets/image/poster.jpg">
+                        <div class="descriptions">
+                            <h1 class="text-center">Game Name</h1>
+                           
+                            <p>
+                                After gunning down a member of the High Table -- the shadowy international assassin's guild -- 
+                                legendary hit man John Wick finds himself stripped of the organization's protective services. 
+                            </p>
+                            <a href="" class="btn btn-danger"> <i class="fa fa-youtube"></i>
+                               Hint
+                            </a>
+                            <div  class="btn btn-outline-info ml-5 text-white" ><b> <i class="fa fa-play"></i> Play</b></div>
+                           
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+    
+          
+    
+        </div>
+      
+    </mat-drawer-container>
+</div>

@@ -1,0 +1,83 @@
+.teamContent{
+    background: transparent;
+    max-width: 100%;
+
+    perspective: 3000px;
+    overflow: hidden;
+}
+mat-card{
+    background: transparent;
+}
+.card{
+    background: transparent;
+    border: none;
+}
+.teamMembers{
+    padding: 5px;
+    
+}
+.teamMembers .image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.teamMembers .image img {
+  
+    transition: .5s;
+}
+.teamMembers:hover .image img {
+    opacity: .5;
+    transform: translateX(40%);/*100%*/
+}
+.teamMembers .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;/*100%*/
+    height: 100%;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateY(-90deg);
+}
+.teamMembers:hover .details {
+    transform: perspective(2000px) rotateY(0deg);
+}
+.teamMembers .details .center {
+    padding: 20px;
+    text-align: center;
+    background:#07bae7;
+    position: absolute;
+    height: 100%;
+}
+
+.teamMembers .details .center ul {
+    margin: 10px auto 0;
+    padding: 0;
+    display: table;
+}
+.teamMembers .details .center ul li {
+    list-style: none;
+    margin: 0 5px;
+    float: left;
+}
+.teamMembers .details .center ul li a {
+    display: block;
+    background: #426585cb;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    transform: .5s;
+}
+.teamMembers .details .center ul li a:hover {
+    background: #e61010;
+}
+
+.teamSection li{
+    border-radius: 3px;
+    padding: 4px;
+}
+.teamSection li:hover{
+    background: rgba(16, 180, 221, 0.377);
+}

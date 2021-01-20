@@ -1,0 +1,155 @@
+<div [style.height]="flag1 ? '80px':'150px'"></div>
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side"  (mouseleave)="sidenavClose(drawer)" >
+      <div class="text-center">
+        <img   class="rounded-circle bg-dark"  [height] = "flag1 ? 50 : 80 " [width] = "flag1 ? 50 : 80 " 
+                    src="../../assets/image/rajesh.jpg" style="cursor: pointer;" (click)="openDilog()">
+                    <h3><b>Userneme</b></h3>
+      </div>
+      <hr class="bg-danger " style="height: 3px;">
+        <ul style="list-style-type:none;" id="sidenavLink">
+          <li> <div class="text-dark mt-3 btn" routerLink="/home" routerLinkActive = "active" (click)="homePage(drawer)"><i class="fa fa-home text-dark" style="font-size:30px;">&nbsp;&nbsp; </i><b style="font-size:20px;"> Home</b>  </div></li>
+          <li> <div class="text-dark  btn" (click)="playedGame(drawer)"><i class="fa fa-gamepad text-dark" style="font-size:30px;">&nbsp;&nbsp; </i><b style="font-size:20px;"> Played Games</b> </div></li>
+          <li> <div class="text-dark  btn" (click)="leaderBoard(drawer)"><i class="fa fa-users text-dark" style="font-size:30px;">&nbsp;&nbsp; </i><b style="font-size:20px;"> Leaderboard</b> </div></li>
+          <li> <div class="text-dark  btn" (click)="scoreBoard(drawer)"><i class="fa fa-desktop text-dark" style="font-size:30px;">&nbsp;&nbsp; </i><b style="font-size:20px;"> Scoreboard</b> </div></li>
+          <li> <div class="text-dark  btn" (click)="progressBoard(drawer)"><i class="fa fa-spinner text-dark" style="font-size:30px;">&nbsp;&nbsp; </i><b style="font-size:20px;"> Progressboard</b> </div></li>
+          
+        </ul>
+         
+         
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+          <h2><i class="fa fa-bars"></i></h2>
+      </button>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-6">
+               
+                 <div class="card-group">
+                  <div class="card "  style="background: transparent; border: none;">
+                    <div class="text-center text-white">
+                      <img  class="rounded-circle bg-dark"  [height] = "flag1 ? 100 : 150 " [width] = "flag1 ? 100 : 150 " 
+                    src="../../assets/image/rajesh.jpg" >
+                    <h3 class="  shadow"><b>Userneme</b></h3>
+                    </div>
+                  </div>
+                  <div class="card  text-white"  style="background: transparent; border: none;">
+                    <ul style="list-style:none;">
+                      <li>  <h2><b class="text-warning">Name : </b><b>Rajesh </b></h2> </li>
+                      <hr class="bg-primary mb-1 d-inline-block mx-auto" style="width: 190px; height: 1px;">
+                      <li>  <h2><b class="text-warning">Status : </b><b>Pro</b></h2> </li>
+                      <hr class="bg-primary mb-1  d-inline-block mx-auto" style="width: 190px; height: 1px;">
+                      <li>  <h2><b class="text-warning">Rank:  </b><b>10000</b></h2> </li>
+                      <hr class="bg-primary mb-1 d-inline-block mx-auto" style="width: 190px; height: 1px;">
+                    </ul>
+                    <div class="progress  shadow">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:40%">40%</div>
+                    </div>
+                    <h3 class="text-center mt-2"><b>Daily Goal</b></h3>
+                  </div>
+                 </div>
+              </div>   
+              <div class="col-md-6" >
+                <div class="text-center text-dark mt-2">
+                  <h1><b>Progress Board</b></h1>
+                  <hr class="bg-primary mb-4 mt-0 d-inline-block mx-auto" style="width: 190px; height: 2px;">
+                </div>
+                <div class="card-group">
+                 
+                  <div class="card text-center text-white" style="background: transparent; border: none;">
+                   
+                    <circle-progress 
+                    [percent]="65.7"
+                    [radius]="80"
+                    [space]="8"
+                    [unitsColor]="'#f5f0f3'"
+                    [titleColor]="'#f5f0f3'"
+                    [subtitleColor]="'#f5f0f3'"
+                    [outerStrokeWidth]="12"
+                    [innerStrokeWidth]="4"
+                    [outerStrokeColor]="'#7CFC00'"
+                    [innerStrokeColor]="'#00FFFF'"
+                    [animation]="true"
+                    [animationDuration]="300"
+             ></circle-progress>
+             <h3><b>Daily </b></h3>
+                  </div>
+                  <div class="card text-center text-white" style="background: transparent; border: none;">
+                    <circle-progress 
+                    [percent]="34.7"
+                    [radius]="80"
+                    [space]="8"
+                    [unitsColor]="'#f5f0f3'"
+                    [titleColor]="'#f5f0f3'"
+                    [subtitleColor]="'#f5f0f3'"
+                    [outerStrokeWidth]="12"
+                    [innerStrokeWidth]="4"
+                    [outerStrokeColor]="'#FFD700'"
+                    [innerStrokeColor]="'#0000FF'"
+                    [animation]="true"
+                    [animationDuration]="300"
+             ></circle-progress>
+             <h3><b>Gamer</b></h3>
+                  </div>
+                </div>
+               
+               
+              </div>
+          </div>
+      </div>
+
+      <div class="container-fluid">
+       <div class="card-group">
+         <div class="card  text-white" style="background: transparent;">
+          <div class="text-center text-dark mt-2">
+                <h1><b>Scoreboard</b></h1>
+                <hr class="bg-primary mb-4 mt-0 d-inline-block mx-auto" style="width: 120px; height: 2px;">
+          </div>
+          <ul style="list-style:none;">
+            <li>  <h2><b class="text-warning">Previous High Score : </b><b>10000</b></h2> </li>
+            <hr class="bg-primary mb-1 d-inline-block mx-auto" style="width: 190px; height: 1px;">
+            <li>  <h2><b class="text-warning">Current High Score : </b><b>10000</b></h2> </li>
+            <hr class="bg-primary mb-1  d-inline-block mx-auto" style="width: 190px; height: 1px;">
+            <li>  <h2><b class="text-warning">Todays Point:  </b><b>10000</b></h2> </li>
+            <hr class="bg-primary mb-1 d-inline-block mx-auto" style="width: 190px; height: 1px;">
+            <li>  <h2><b class="text-warning"> All Point:  </b><b>10000</b></h2> </li>
+            <hr class="bg-primary mb-1  d-inline-block mx-auto" style="width: 190px; height: 1px;">
+          </ul>
+          <div class="progress  shadow mb-2">
+            <div class="progress-bar bg-danger" style="width:60%">
+              Previous Score
+            </div>
+            
+            <div class="progress-bar bg-success" style="width:40%">
+              Current Score
+            </div>
+          </div> 
+         </div>
+         <div class="card text-white text-center" style="background: transparent; cursor: pointer;"  (click)="leaderBoard(drawer)">
+          <div class="text-center text-dark mt-2">
+            <h1><b>Leaderboard</b></h1>
+            <hr class="bg-primary mb-4 mt-0 d-inline-block mx-auto" style="width: 120px; height: 2px;">
+          </div>
+          <div class="text-center">
+            <div class="rounded-circle"><i class="fa fa-user" style="font-size: 100px;" ></i></div>
+            <hr class="bg-primary mb-1  d-inline-block mx-auto" style="width: 100px; height: 1px;">
+            <li>  <h2><b class="text-warning"> Rank:  </b><b>10000</b></h2> </li>   
+            <hr class="bg-primary mb-1  d-inline-block mx-auto" style="width: 100px; height: 1px;">      
+          </div>
+          <div class="example-button-row">
+            
+            <button mat-raised-button color="primary">Primary</button>
+            <button mat-raised-button color="accent">Accent</button>
+            <button mat-raised-button color="warn">Warn</button>
+          </div>
+         </div>
+       </div>
+      </div>
+
+    </div>
+  
+</mat-drawer-container>
+  

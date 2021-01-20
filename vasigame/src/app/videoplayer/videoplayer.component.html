@@ -1,0 +1,100 @@
+<div *ngIf = "!flag">
+    <div *ngIf = "gamePlay">
+        <div id="section">
+            <h1 id="title" class="text-center text-white">{{upComingGame.title}}</h1> 
+            <h3 id="desc" class="text-white">{{upComingGame.description}}</h3>
+            <div class="text-center mt-5" *ngIf="upComingGame.statusFlag">
+                <div  class="btn btn-outline-info " (click)="game()"><b> <i class="fa fa-play"></i> Play</b></div>
+            </div>
+            
+        </div>
+        <div id="bottommark" [style.margin-top]="marginTop"  >
+    
+            <div class="card-group" >
+              <div class="card" style=" height: 260px; cursor: pointer;" (click)="recentGameInfo(gameData)" *ngFor=" let gameData of recentGame " >
+                   <div class="gameSection">
+                      <div class="image">
+                        <img src="../../assets/image/poster.jpg"/>
+                      </div>
+                      <div class="details">
+                        <div class="text-center mt-4 text-white">
+                          <h1>{{gameData.title}}<br><span>team leader</span></h1>
+                          <p>{{gameData.description}}</p>
+                        </div>
+                      </div>
+                 </div>    
+               </div>
+            </div>
+        </div>
+          <video id="videoContainer" class="embed-responsive" controls="false" autoplay loop  >
+               <source media="(max-width: 100%, max-height : 100%)" [src]="upComingGame.videoUrl" type="video/mp4">
+          </video>
+        
+    </div>
+    
+    <div *ngIf = "!gamePlay">
+        <div id="section" >
+            <h1 id="title" class="text-center text-white">{{gameData.title}}</h1> 
+            <h3 id="desc" class="text-white">{{gameData.description}}</h3>
+            <div class="text-center mt-5" *ngIf="gameData.statusFlag">
+                <div  class="btn btn-outline-info " (click)="game()"><b> <i class="fa fa-play"></i> Play</b></div>
+            </div>
+            
+        </div>
+         
+        
+        <div id="bottommark" [style.margin-top]="marginTop">
+             
+        </div>
+          <video controls="false"  class="embed-responsive" autoplay loop  id="videoContainer" >
+               <source media="(max-width: 100%, max-height : 100%)" [src]="gameData.videoUrl" type="video/mp4">
+          </video>
+    
+    </div>
+</div>
+
+<div *ngIf = "flag">
+    <div *ngIf = "gamePlay">
+        <div id="section1"  style="position: absolute;">
+            <h1 id="title1" class="text-center text-white">{{upComingGame.title}}</h1> 
+            <h3 id="desc1" class="text-white">{{upComingGame.description}}</h3>
+            <div class="text-center mt-5" *ngIf="upComingGame.statusFlag">
+                <div  class="btn btn-outline-info " (click)="game()"><b> <i class="fa fa-play"></i> Play</b></div>
+            </div>
+        </div>
+         
+        <div >
+          <div id="bottommark" [style.margin-top]="marginTop" >
+    
+              <div class="card-group" >
+                <div class="card" style=" height: 260px" (click)="recentGameInfo(recentGame[0])">
+                  
+                </div>
+              </div>
+          </div>
+          <video id="videoContainer" class="embed-responsive" controls="false" autoplay loop  >
+               <source media="(max-width: 100%, max-height : 100%)" [src]="upComingGame.videoUrl" type="video/mp4">
+          </video>
+        </div>
+    </div>
+    
+    <div *ngIf = "!gamePlay">
+        <div id="section1" style="position: absolute;">
+            <h1 id="title1" class="text-center text-white">{{gameData.title}}</h1> 
+            <h3 id="desc1" class="text-white">{{gameData.description}}</h3>
+            <div class="text-center mt-5" *ngIf="gameData.statusFlag">
+                <div  class="btn btn-outline-info " (click)="game()"><b> <i class="fa fa-play"></i> Play</b></div>
+            </div>
+        </div>
+         
+        <div >
+            <div id="bottommark" [style.margin-top]="marginTop">
+             
+            </div>
+          <video controls="false"  class="embed-responsive" autoplay loop  id="videoContainer" >
+               <source media="(max-width: 100%, max-height : 100%)" [src]="gameData.videoUrl" type="video/mp4">
+          </video>
+        </div> 
+    </div> 
+</div>
+

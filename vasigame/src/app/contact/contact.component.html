@@ -1,0 +1,86 @@
+<div *ngIf = "flag" style="height: 50px;"></div>
+<div *ngIf = "!flag" class="containers" (mousemove)="moverPositin($event)">
+  <div class='card'[ngStyle]="{'transform': rotation}">
+    <div class="card-content">
+     <img src="../../assets/image/logo.png" alt="">
+      <p>Khelo Game</p>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="page-footer font-small unique-color-dark text-white">
+
+    
+  
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+  
+      <!-- Grid row -->
+      <div class="row mt-3">
+  
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4">
+  
+          <!-- Content -->
+          <h3 class=" font-weight-bold" style="font: outline; font-variant: small-caps;"> VasiGames</h3>
+          <hr class="bg-primary mb-4 mt-0 d-inline-block  mx-auto" style="width: 90px; height: 2px;">
+          <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
+            consectetur
+            adipisicing elit.</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+  
+        <!-- Grid column -->
+        <div  class="col-md-4 col-lg-2 col-xl-2 mx-auto mb-4">
+  
+          <!-- Links -->
+          <h3 class="text-uppercase font-weight-bold">Social links</h3>
+          <hr class="bg-primary mb-4 mt-0 d-inline-block mx-auto" style="width: 90px; height: 2px;">
+          <p>
+            <a class="bg-primary " mat-mini-fab href="#"><h4><i class="fa fa-facebook-f"></i> </h4>  </a>
+          </p>
+          <p>
+            <a  mat-mini-fab href="#"><h4><i class="fa fa-instagram"></i></h4>  </a>
+          </p>
+          <p>
+            <a class="bg-danger "  mat-mini-fab href="#"><h2><i class="fa fa-youtube"></i></h2>  </a>
+          </p>
+          
+  
+        </div>
+        <!-- Grid column -->
+  
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+  
+          <!-- Links -->
+          <h3 class="text-uppercase font-weight-bold">Contact</h3>
+          <hr class="bg-primary mb-4 mt-0 d-inline-block mx-auto" style="width: 90px; height: 2px;">
+          <p>
+            <i class="fa fa-home mr-3"></i> <small>Provident Sunworth Bangalore India</small> </p>
+          <p>
+            <i class="fa fa-envelope mr-3"></i> info@example.com</p>
+          <p>
+            <i class="fa fa-phone mr-3"></i> + 91 9148002717</p>
+          <p>
+            <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2020 Copyright :  VasiGames
+     
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->

@@ -1,0 +1,49 @@
+
+body{
+	padding: 0px;
+	margin: 0px;
+}
+main{
+	height: 100vh;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+section{
+	height: 100vh;
+	position: relative;
+}
+section:nth-child(1){
+	background-image: linear-gradient(rgb(7, 140, 163),rgba(141, 102, 185, 0.3));
+}
+section:nth-child(2){
+	
+	background-image: linear-gradient(rgba(16, 109, 146, 1),rgba(141, 102, 185, 0.3));
+}
+section:nth-child(3){
+	background-image: linear-gradient(rgb(5, 49, 90),rgba(141, 102, 185, 0.3));
+}
+section:nth-child(4){
+	background-image: linear-gradient(rgb(4, 56, 90),rgba(63, 59, 59, 0.3));
+}
+section:nth-child(5){
+
+background-image: linear-gradient(rgb(13, 105, 78),rgba(63, 56, 56, 0.3));
+}
+.text{
+	position: absolute;
+	left: 30%;
+	top: 50%;
+}
+.navb{
+	position: fixed;
+	top: 50%;
+    margin-right: auto;
+}
+.navb button{
+    padding: 10px;
+    margin: 5px;
+	border: 0;
+	border-radius: 30px;
+	font-size: 14px;
+}

@@ -1,0 +1,36 @@
+<main>
+     	
+    <div  class="content">
+      
+       <section id="section">
+        <router-outlet></router-outlet>
+       </section>
+       <section>     
+        <div [style.height]="flag ? '100px' : '150px'"></div>
+        <div class="text-center container-fluid">
+          <app-popular-game-section></app-popular-game-section>
+        </div>
+       </section>
+       <section>
+        <app-gamesection></app-gamesection>
+       </section>
+       <section>
+         
+         <div class="container-fluid"><app-team-info></app-team-info></div>
+        
+       </section>
+       <section>
+         <div>
+         
+          <app-contact></app-contact>
+         </div>
+       </section>
+  
+    </div>
+    <div class="navb">
+        <button id="prev"></button>
+        <button id="next"></button>
+    </div>
+  
+  
+  </main>

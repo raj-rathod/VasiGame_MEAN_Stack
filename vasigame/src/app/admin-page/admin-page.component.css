@@ -1,0 +1,36 @@
+.example-container {
+    background: transparent;
+   
+  }
+  .example-sidenav {
+    padding: 20px;
+    background:transparent;
+  }
+  .example-button-row {
+    margin-top: 20px;
+    display: table-cell;
+  }
+  
+  .example-button-row button {
+    display: table-cell;
+    margin-right: 25px;
+    margin-left: 30px;
+  }
+  #sidenavLink li{
+    border-radius: 3px;
+  }
+  #sidenavLink li:hover {
+     background: rgba(255,255,255,0.4);
+  }
+  .circle {
+    border: 3px solid blue;
+    background: transparent;
+    height: 90px;
+    width: 90px;
+    border-radius:50%;
+    margin-left:105px;
+    
+}
+.card .card{
+  border-style: none;
+}

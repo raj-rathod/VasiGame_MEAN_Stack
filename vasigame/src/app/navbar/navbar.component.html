@@ -1,0 +1,34 @@
+
+<nav class="navbar  fixed-top" id="navBar" >
+    <div class="container-fluid">
+           <div class="navbar-header">
+             <a href="#section" routerLink="/admin" routerLinkActive = "active"  class="navbar-brand"><h1 class="text-white"  id="navbarTitle"
+              style="font-size:50px; font: outline; font-variant: small-caps;">{{title}}</h1></a>
+           </div>
+          
+           <div class="example-button-row nav navbar-link"  *ngIf="!flag">
+            <a class="bg-dark " mat-fab routerLink="/" routerLinkActive = "active" ><h1> <i class="fa fa-home"></i></h1></a>
+            <a class="bg-primary" mat-fab href="https://www.facebook.com/" target="blank"><h1> <i class="fa fa-facebook-f"></i></h1></a>
+            <a class="bg-info" mat-fab routerLink="/fileupload" routerLinkActive = "active" ><h1> <i class="fa fa-linkedin"></i></h1></a>
+            <a mat-fab href="https://www.instagram.com/raj_rathod143.n/" target="blank"><h1> <i class="fa fa-instagram"></i></h1></a>
+            <button mat-fab color="primary"  routerLink="/userprofile" routerLinkActive = "active" *ngIf=userProfileFlag>
+              <h1> <i class="fa fa-user-circle"></i></h1>
+            </button>
+            <button mat-fab class="bg-secondary" (click) = "openLog()" *ngIf=userProfileFlag>
+              <h4> <b>Log In</b></h4>
+            </button>
+           
+          </div>
+
+          <div class="example-button-row1 nav navbar-link" style="margin: 2px;" *ngIf="flag">
+            <a class="bg-dark " mat-mini-fab routerLink="/home" routerLinkActive = "active" ><h3> <i class="fa fa-home"></i></h3></a>
+            <a class="bg-primary" mat-mini-fab routerLink="/players" routerLinkActive = "active" ><h3> <i class="fa fa-facebook-f"></i></h3></a>
+            <a class="bg-info" mat-mini-fab routerLink="/fileupload" routerLinkActive = "active" ><h3> <i class="fa fa-linkedin"></i></h3></a>
+            <a mat-mini-fab href="#"routerLink="/userprofile" routerLinkActive = "active" ><h3> <i class="fa fa-instagram"></i></h3></a>
+            <button mat-mini-fab color="primary" (click) = "openLog()" >
+              <h3> <i class="fa fa-user-circle"></i></h3>
+            </button>
+           
+          </div>
+    </div>
+  </nav>

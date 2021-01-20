@@ -1,0 +1,100 @@
+#videoContainer{
+	position:fixed;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1;
+}
+#section{
+	margin-top:225px;
+	 margin-left: 70px; 
+	 position: absolute;
+   }
+   #title{
+	
+	 opacity: 0.75;
+	 font-size: 60px;
+	 font-family: "Comic Sans MS",cursive,sans-serif;
+	 font-style: italic;
+   }
+   #desc{
+	  
+	 opacity: 0.75;
+	 margin-left: 90px;
+	 margin-top: 80px;
+	 font-size: 30px;
+	 font-family: "Comic Sans MS",cursive,sans-serif;
+	 font-style: initial;
+   }
+   #section1{
+	margin-top:150px;
+	 margin-left:25px; 
+   }
+   #title1{
+	 opacity: 0.75;
+	 font-size: 40px;
+	 font-family: "Comic Sans MS",cursive,sans-serif;
+	 font-style: italic;
+   }
+   #desc1{
+	 opacity: 0.75;
+	 margin-left:30px;
+	 margin-top: 50px;
+	 font-size: 20px;
+	 font-family: "Comic Sans MS",cursive,sans-serif;
+	 font-style: initial;
+   }
+
+   #bottommark{
+    margin-top: 757px;
+	position: absolute;
+	 background-image: linear-gradient(rgba(255,255,255,0),black);
+	 height:250px;
+	width: 100%;
+  }
+  #bottommark .card{
+	background-color: transparent;
+
+  }
+
+  .gameSection {
+    position: absolute;
+    top: 50%;
+	left: 50%;
+	width: 630px;
+    transform: translate(-50%,-50%);
+}
+.gameSection .image {
+    height: 260px;
+    overflow: hidden;
+}
+.gameSection .image img {
+    width: 100%;
+	transition: .5s;
+	opacity: 0.3;
+}
+.gameSection:hover .image img {
+    opacity: .5;
+  
+}
+.gameSection .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    height: 100%;
+    background: #18808896;
+    transition: .5s;
+    transform-origin: left;
+    transform: perspective(2000px) rotateX(90deg);
+}
+.gameSection:hover .details {
+    transform: perspective(2000px) rotateX(0deg);
+}
+
+
+  

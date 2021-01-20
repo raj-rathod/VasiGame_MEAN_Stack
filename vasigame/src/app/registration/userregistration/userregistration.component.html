@@ -1,0 +1,95 @@
+
+       
+        <mat-card class="formHeader">
+            <mat-card-content class="mt-2">
+               <mat-grid-list cols="2" rowHeight="40px" >
+                   <mat-grid-tile class="text-center">
+                      <div class="btn btn-outline-primary active" (click)="userLoginBtn()">Sign In</div>
+                    </mat-grid-tile>
+                    <mat-grid-tile>
+                       <div class="btn btn-outline-primary " (click)="userSingupBtn()">Sign Up</div>
+                    </mat-grid-tile>
+               </mat-grid-list>
+           </mat-card-content>
+        </mat-card>
+        <div *ngIf="!loginShowBtn">  
+            <form #signUpForm = "ngForm" (ngSubmit) = "signUpForm.valid && onSubmit(signUpForm)">
+              <mat-card class="formContent">
+                
+                  <mat-form-field  appearance="fill">
+                      <mat-label> Name</mat-label>
+                      <input matInput #name ="ngModel" name="name"  placeholder="Ex. Rajesh" [(ngModel)]="userInfo.name"required >
+                      <mat-error *ngIf="signUpForm.submitted && !name.valid">This field is required.</mat-error>
+                  </mat-form-field>
+      
+                  <mat-form-field  appearance="fill">
+                      <mat-label>User Name</mat-label>
+                      <input matInput #username = "ngModel" name="username" placeholder="Ex. Nougat" [(ngModel)]="userInfo.username" required >
+                      <mat-error *ngIf="signUpForm.submitted && !username.valid">This field is required.</mat-error>
+                  </mat-form-field>
+          
+                 <mat-form-field appearance="fill">
+                  <mat-label>Enter your email</mat-label>
+                  <input matInput #email="ngModel" name="email" placeholder="pat@example.com"  required [(ngModel)]="userInfo.email" [pattern]="emailRegex"> 
+                  <mat-error *ngIf="signUpForm.submitted && email.errors">
+                      <mat-error *ngIf="email.errors.required">This field is required.</mat-error>
+                      <mat-error *ngIf="email.errors.pattern">Invalid email address.</mat-error>
+                  </mat-error>
+                 
+                 </mat-form-field>
+                
+                   <mat-form-field hintLabel="Min 6 characters" appearance="fill">
+                      <mat-label>Enter your password</mat-label>
+                      <input matInput  #password="ngModel" name="password" minlength="6" [type]="hide ? 'password' : 'text'" [(ngModel)]="userInfo.password" required >
+                      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                       <i class="fa fa-eye-slash" *ngIf="hide"></i> <i *ngIf="!hide" class="fa fa-eye"></i>
+                      </button>
+                      <mat-error *ngIf="signUpForm.submitted && password.errors">
+                      <mat-error *ngIf="password.errors.required">This field is required.</mat-error>
+                      <mat-error *ngIf="password.errors.minlength">Enter atleast 6 characters.</mat-error>
+                      </mat-error>
+                   </mat-form-field>
+                   <mat-card-actions align="start" class="mt-3 text-center">
+                    <input type="submit" class="btn btn-outline-danger" value="Sign Up">
+                 </mat-card-actions>
+                   
+                      
+              </mat-card>
+             </form>
+         </div> 
+
+   <div *ngIf="loginShowBtn">  
+    <form #signInForm = "ngForm" (ngSubmit) = "signInForm.valid && onSubmit(signInForm)">
+    <mat-card class="formContent">
+        <div class="text-center mb-5">
+            <img  class="rounded-circle"  height="100" width="100" src="../../../assets/image/rajesh.jpg" alt="">
+        </div>
+        
+
+        <mat-form-field  appearance="fill">
+            <mat-label>User Name</mat-label>
+            <input matInput #username = "ngModel" name="username" placeholder="Ex. Nougat" [(ngModel)]="userInfo.username" required >
+            <mat-error *ngIf="signInForm.submitted && !username.valid">This field is required.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field  appearance="fill">
+            <mat-label>Enter your password</mat-label>
+            <input matInput  #password="ngModel" name="password" [type]="hide ? 'password' : 'text'" [(ngModel)]="userInfo.password" required >
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+             <i class="fa fa-eye-slash" *ngIf="hide"></i> <i *ngIf="!hide" class="fa fa-eye"></i>
+            </button>
+            <mat-error *ngIf="signInForm.submitted && password.errors">
+            <mat-error *ngIf="password.errors.required">This field is required.</mat-error>
+            </mat-error>
+         </mat-form-field>
+      
+         
+        
+         <mat-card-actions align="start" class="mt-3 text-center">
+            <input type="submit" class="btn btn-outline-danger" value="Log In">
+         </mat-card-actions>
+            
+    </mat-card>
+    </form>
+</div>
+   

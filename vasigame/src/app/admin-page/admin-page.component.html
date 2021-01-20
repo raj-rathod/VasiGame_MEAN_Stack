@@ -1,0 +1,182 @@
+<div [style.height]="flag1 ? '80px':'150px'"></div>
+
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side"  (mouseleave)="sidenavClose(drawer)" >
+      <div class="text-center">
+        <img   class="rounded-circle bg-dark"  [height] = "flag1 ? 50 : 80 " [width] = "flag1 ? 50 : 80 " 
+                    src="../../assets/image/rajesh.jpg">
+                    <h3><b>Userneme</b></h3>
+      </div>
+      <hr class="bg-danger " style="height: 3px;">
+        <ul style="list-style-type:none;" id="sidenavLink">
+          <li> <div class="text-dark mt-3 btn" routerLink="/home" routerLinkActive = "active" (click)="homePage(drawer)"><i class="fa fa-home text-dark" style="font-size:30px;">&nbsp;&nbsp; </i><b style="font-size:20px;"> Home</b>  </div></li>
+          <li> <div class="text-dark  btn" (click)="gamesData(drawer)"><i class="fa fa-gamepad text-dark" style="font-size:30px;">&nbsp;&nbsp; </i><b style="font-size:20px;"> Games</b> </div></li>
+          <li> <div class="text-dark  btn" (click)="teamBoard(drawer)"><i class="fa fa-users text-dark" style="font-size:30px;">&nbsp;&nbsp; </i><b style="font-size:20px;"> Team</b> </div></li>
+          <li> <div class="text-dark  btn" (click)="scoreBoard(drawer)"><i class="fa fa-desktop text-dark" style="font-size:30px;">&nbsp;&nbsp; </i><b style="font-size:20px;"> Scoreboard</b> </div></li>
+          <li> <div class="text-dark  btn" (click)="progressBoard(drawer)"><i class="fa fa-spinner text-dark" style="font-size:30px;">&nbsp;&nbsp; </i><b style="font-size:20px;"> Progressboard</b> </div></li>
+          
+        </ul>
+         
+         
+    </mat-drawer>
+  
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+          <h2><i class="fa fa-bars"></i></h2>
+      </button>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-md-6">
+                <div class="text-center text-dark mt-2">
+                    <h1><b>Played Game Weekly Board</b></h1>
+                    <hr class="bg-primary mb-4 mt-0 d-inline-block mx-auto" style="width: 290px; height: 2px;">
+                  </div>
+                 <div class="card text-white" style="background: transparent; border: none;">
+                   
+                  <div style="display: block; " class="ml-4 text-white">
+                    <canvas baseChart
+                       [datasets]="chartdata"
+                       [labels]="chartlables"
+                       [options]="chartoptions"
+                       [legend]="chartlegend" 
+                       [chartType]="charttype">
+                    </canvas>
+                  </div>
+                 </div>
+              </div>   
+              <div class="col-md-6" >
+                <div class="text-center text-dark mt-2">
+                  <h1><b>Games Board</b></h1>
+                  <hr class="bg-primary mb-4 mt-0 d-inline-block mx-auto" style="width: 190px; height: 2px;">
+                </div>
+                <div class="card  text-white" style="background: transparent; border: none;">
+                  <div style="display: block; " class="ml-4 text-white" >
+                    <canvas baseChart
+                      [data]="pieChartData"
+                      [labels]="pieChartLabels"
+                      [chartType]="pieChartType"
+                      [options]="pieChartOptions"
+                      [colors]="pieChartColors"
+                      [plugins]="pieChartPlugins"
+                      [legend]="pieChartLegend">
+                    </canvas>
+                  </div>
+
+                </div>
+               
+               
+              </div>
+          </div>
+      </div>
+
+      <div class="container-fluid">
+       <div class="card-group">
+         <div class="card  text-white" style="background: transparent;">
+          <div class="text-center text-dark mt-2">
+                <h1><b>Users Board</b></h1>
+                <hr class="bg-primary mb-4 mt-0 d-inline-block mx-auto" style="width: 120px; height: 2px;">
+          </div>
+          <div class="card-group">
+            <div class="card text-center" style="background: transparent;">
+                <div class="circle text-center">
+                  <h3><small>Users</small></h3>
+                  <i class="fa fa-users text-primary" style="font-size: 25px;" ></i>
+                </div>
+                <hr class="bg-primary mb-1  d-inline-block mx-auto" style="width: 80px; height: 1px;">
+                <div class="text-center text-warning" style="font-weight: bold; ">
+                  <app-counter 
+                [from]=0 
+                [to]=100000
+                [of]=100000
+                [fontSize]=100
+                [showCircle]=false
+                [finishedText]="'100k'"
+                ></app-counter> 
+                </div>  
+              </div>
+              <div class="card text-center" style="background: transparent;">
+                <div class="circle text-center">
+                  <h3><small>New User</small></h3>
+                  <i class="fa fa-users text-primary" style="font-size: 25px;" ></i>
+                </div>
+                <hr class="bg-primary mb-1  d-inline-block mx-auto" style="width: 80px; height: 1px;">
+                <div class="text-center text-warning" style="font-weight: bold; ">
+                  <app-counter 
+                [from]=0 
+                [to]=100000
+                [of]=100000
+                [fontSize]=100
+                [showCircle]=false
+                [finishedText]="'100k'"
+                ></app-counter> 
+                </div>  
+              </div>
+              <div class="card text-center" style="background: transparent;">
+                <div class="circle text-center">
+                  <h3><small>Active</small></h3>
+                  <i class="fa fa-users text-primary" style="font-size: 25px;" ></i>
+                </div>
+                <hr class="bg-primary mb-1  d-inline-block mx-auto" style="width: 80px; height: 1px;">
+                <div class="text-center text-warning" style="font-weight: bold; ">
+                  <app-counter 
+                [from]=0 
+                [to]=100000
+                [of]=100000
+                [fontSize]=100
+                [showCircle]=false
+                [finishedText]="'100k'"
+                ></app-counter> 
+                </div>  
+              </div>
+          </div>
+         </div>
+         <div class="card text-white text-center" style="background: transparent; ">
+          <div class="text-center text-dark mt-2">
+            <h1><b>Progressboard</b></h1> 
+            <hr class="bg-primary mb-4 mt-0 d-inline-block mx-auto" style="width: 120px; height: 2px;">
+          </div>
+          <div class="card-group">
+            <div class="card text-center text-white" style="background: transparent; border: none;">
+              <circle-progress 
+              [percent]="65.7"
+              [radius]="50"
+              [space]="6"
+              [unitsColor]="'#f5f0f3'"
+              [titleColor]="'#f5f0f3'"
+              [subtitleColor]="'#f5f0f3'"
+              [outerStrokeWidth]="8"
+              [innerStrokeWidth]="4"
+              [outerStrokeColor]="'#7CFC00'"
+              [innerStrokeColor]="'#00FFFF'"
+              [animation]="true"
+              [animationDuration]="300"
+               ></circle-progress>
+                    <h3><b>Daily Goal </b></h3>
+           </div>
+            <div class="card text-center text-white" style="background: transparent; border: none;">
+              <circle-progress 
+              [percent]="34.7"
+              [radius]="50"
+              [space]="6"
+              [unitsColor]="'#f5f0f3'"
+              [titleColor]="'#f5f0f3'"
+              [subtitleColor]="'#f5f0f3'"
+              [outerStrokeWidth]="8"
+              [innerStrokeWidth]="4"
+              [outerStrokeColor]="'#FFD700'"
+              [innerStrokeColor]="'#0000FF'"
+              [animation]="true"
+              [animationDuration]="300"
+                    ></circle-progress>
+                     <h3><b>Played Games</b></h3>
+            </div>
+          </div>
+          
+         </div>
+       </div>
+      </div>
+
+    </div>
+  
+</mat-drawer-container>
+

@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class=" card-header bg-info">
+                <h3 class="text-white text-center">File Upload</h3>
+            </div>
+        </div>
+        <div class="card-body ">
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="file" class="form-control" name="file" multiple ng2FileSelect [uploader]="uploader">
+                </div>
+
+            </form>
+            <div class="row" *ngFor="let item of uploader.queue">
+                <div class="col-md-4">{{item.file.name}}</div>
+                <div class="col-md-4">
+                    <div class="progress">
+                        <div class="progress-bar bg-success " [ngStyle]="{'width':item.progress+'%'}"></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <button  type="button" class="btn btn-dark" (click)="item.upload()">Upload</button>
+                    <button  type="button" class="btn btn-danger" (click)="item.remove()">Cancle></button>
+                </div>
+            </div>
+            <div class="row" *ngFor="let file of uploadedfilelist">
+                <div class="col-md-12">{{file.uploadname}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3"> <button mat-raised-button>Click</button></div>
+</div>

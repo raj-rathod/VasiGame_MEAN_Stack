@@ -1,0 +1,14 @@
+#navBar{
+	position: absolute; background-image: linear-gradient(black,rgba(255,255,255,0));
+	height: 150px;
+}
+.example-button-row button,
+.example-button-row a{
+    margin: 10px;
+    margin-right: 10px;
+}
+.example-button-row1 button,
+.example-button-row1 a{
+    margin: 5px;
+    margin-right: 5px;
+}

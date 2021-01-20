@@ -1,0 +1,54 @@
+
+ 
+
+   
+       
+     
+          <button type="button" class="close " [mat-dialog-close]="true" >&times;</button>
+            <div class="teamContent" [style.height]="flag ? '350px' : '400px'">
+                <div class="flip-card-inner">
+                    <div  class="flip-card-front" >
+                      
+                    <mat-card>
+                        <mat-card-header>
+                            <img mat-card-avatar style="background-color: rgb(14, 15, 15);" [src]="data.image">
+                            <mat-card-title class="text-white ">{{data.name}}</mat-card-title>
+                            <mat-card-subtitle class="text-white">{{data.post}}</mat-card-subtitle>
+                            <mat-card-subtitle class="text-white"><small>{{data.education}}</small></mat-card-subtitle>
+                        </mat-card-header>
+                        <mat-card-content>
+                            <div class="text-center mb-4">
+                                <img class="rounded-circle"  [height] = "flag ? 150 : 280 " [width] = "flag ? 150 : 280 " [src]="data.image"  >
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                    </div>
+                    
+                    <div class="flip-card-back">
+                        <mat-card>
+                        <mat-card-content>
+                            <p class="text-center" *ngIf="!flag"><b>About</b></p>
+                            <hr class="bg-primary mb-2  d-inline-block mx-auto" style="width: 100px; height: 2px;">
+                            <p class="text-white">{{data.description}}</p>
+                        </mat-card-content>
+                        <mat-card-footer>
+                            <h3  class="text-white text-center"><b>Contact</b> </h3>
+                            <hr class="bg-primary mb-2  d-inline-block mx-auto" style="width: 100px; height: 2px;">
+                             <mat-grid-list cols="4" rowHeight="50px" class="mb-3">
+                             <mat-grid-tile><a class="bg-primary" mat-mini-fab [href]="data.contact.facebook"><h2><i class="fa fa-facebook-f"></i></h2>  </a></mat-grid-tile>
+                             <mat-grid-tile><a  mat-mini-fab [href]="data.contact.instagram"><h2><i class="fa fa-instagram"></i></h2>  </a></mat-grid-tile>
+                             <mat-grid-tile><a class="bg-info" mat-mini-fab [href]="data.contact.twitter"><h2><i class="fa fa-twitter-square"></i></h2>  </a></mat-grid-tile>
+                             <mat-grid-tile><a class="bg-info" mat-mini-fab [href]="data.contact.Linkdin"><h2><i class="fa fa-linkedin"></i> </h2> </a></mat-grid-tile>
+                             </mat-grid-list>
+                            
+                        </mat-card-footer>
+                    </mat-card>
+                    </div>
+    
+                </div>
+            </div>
+          
+     
+            
+        
+    

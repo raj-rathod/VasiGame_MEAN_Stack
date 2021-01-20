@@ -1,0 +1,104 @@
+<div [ngStyle]="{'height': flag ? '50px' : '100px' }"></div>
+<div class="container-fluid" *ngIf="!flag">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="text-center text-white">
+                <h1>Administrators</h1>
+                <hr class="bg-primary mb-2 mt-0 d-inline-block mx-auto" style="width: 150px; height: 2px;">
+            </div>
+            <div class="card-group " >
+                <div class="card text-center text-white" *ngFor="let team of teamdata"  style=" background:rgba(250,250,250, 0);">
+                    <div class="card-body text-center" style="cursor: pointer;"> 
+                        <img class="rounded-circle " [src]="team.image" [height]="flag ? 100 : 150 " [width] = "flag ? 100 : 150 "  (mouseenter)="showTeamData(team)">         
+                      </div>
+                    <hr class="bg-primary mb-4 mt-0 d-inline-block mx-auto" style="width: 200px; height: 2px;"> 
+                    <h4>{{team.post}}</h4>
+                </div>
+             
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="text-center text-white "><h1><b>About Us</b></h1>
+                <hr class="bg-primary mb-4 mt-0 d-inline-block mx-auto" style="width: 200px; height: 2px;"> 
+            </div>
+          
+        </div>
+    </div>
+
+   <div class="row">
+       <div class="col-md-6">
+        <div class="text-center text-white "><h1><b>About Team </b></h1>
+            <hr class="bg-primary mb-4 mt-0 d-inline-block mx-auto" style="width: 200px; height: 2px;"> 
+        </div>
+       </div>
+       <div class="col-md-6">
+            <div class="text-center text-white mt-3">
+                <h1>Team Members</h1>
+                <hr class="bg-primary mb-4 mt-0 d-inline-block mx-auto" style="width: 250px; height: 2px;">
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card text-center text-white" >
+                        <div class="teamMembers">
+                            <div class="image">
+                                <div class="card-body text-center" style="cursor: pointer;"> 
+                                    <img class="rounded-circle "  [src]="teamInfo.image" [height]="flag ? 100 : 150 " [width] = "flag ? 100 : 150 " >         
+                                </div>
+                              
+                                <hr class="bg-danger mb-0 mt-0 d-inline-block mx-auto" style="width: 200px; height: 2px;">
+                                <h3>{{teamInfo.post}}</h3>
+                            </div>
+                            <div class="details">
+                              <div class="center">
+                                <h1>{{teamInfo.name}}</h1>
+                                <h4><small><b>{{teamInfo.education}}</b></small></h4>
+                                <p>{{teamInfo.description}}</p>
+                                <ul>
+                                  <li><a [href]="teamInfo.contact.facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                  <li><a [href]="teamInfo.contact.twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                  <li><a [href]="teamInfo.contact.linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                  <li><a [href]="teamInfo.contact.instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="col-md-4 teamSection">
+                    <ul style="list-style: none;">
+                        <li *ngFor="let teamMember of teamMemberData" (click)="teamMemberInfo(teamMember)" style="cursor: pointer;">
+                            <div class="text-white"> 
+                              <h3 class="ml-3">{{teamMember.post}}</h3>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+   </div>
+    
+    
+  
+        
+    
+</div>
+
+   
+
+
+  <div  *ngIf="flag" >
+      <div style="height:20px;"></div>
+    <div class="container-fluid">
+        <div class="card-group " >
+            <div class="card" *ngFor="let team of teamdata"  style=" background:rgba(250,250,250, 0);">
+                <div class="card-body text-center" style="cursor: pointer;">
+                    
+             <img class="rounded-circle " [src]="team.image" [height]="flag ? 100 : 200 " [width] = "flag ? 100 : 200 "  (mouseenter)="showTeamData(team)">
+                      
+                     
+                </div>
+            </div>
+         
+        </div>
+    </div>
+  </div>

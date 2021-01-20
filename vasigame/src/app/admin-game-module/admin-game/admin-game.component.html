@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card bg-dark">
+                <div class="card-body">
+                    <div class="text-white">
+                        <mat-form-field appearance="fill">
+                          <mat-label class="text-primary">Game Title</mat-label>
+                          <input matInput [(ngModel)]="gameData.title">
+                        </mat-form-field><br>
+                        <mat-form-field appearance="fill">
+                            <mat-label class="text-primary">Game Category</mat-label>
+                            <input matInput [(ngModel)]="gameData.category">
+                          </mat-form-field><br>
+                          <mat-form-field appearance="fill">
+                            <mat-label class="text-primary">Game Poster Url</mat-label>
+                            <input matInput [(ngModel)]="gameData.posterUrl">
+                          </mat-form-field><br>
+                          <mat-form-field appearance="fill">
+                            <mat-label class="text-primary">Game Api Url</mat-label>
+                            <input matInput [(ngModel)]="gameData.apiUrl">
+                          </mat-form-field>
+                        <br>
+                        
+                        <mat-form-field appearance="fill">
+                          <mat-label class="text-primary">Description</mat-label>
+                          <textarea matInput  [(ngModel)]="gameData.description"></textarea>
+                        </mat-form-field>
+                      </div>
+                      
+                      
+                </div>
+                <div class="card-footer">
+                    <div class="btn btn-warning"><b>Update</b></div>
+                    <div class="btn btn-danger ml-5"><b>Delete</b></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-dark">
+                <div class="card-header text-center">
+                    <div class="btn btn-primary">New Game</div>
+                </div>
+                <div class="card-body">
+                   <ul  style="list-style: none;">
+                       <li *ngFor="let gameData of gamesData"(click)="gameDataClick(gameData)" style="cursor: pointer;"><p class="text-white">{{gameData.title}}</p></li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
